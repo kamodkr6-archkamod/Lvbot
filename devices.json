@@ -1,0 +1,38 @@
+{
+    "8032648207": {
+        "unique_device_id": "Google|d7e3e68b-c906-48c3-b088-662655650e82",
+        "brand": "Xiaomi",
+        "model": "2203121C",
+        "gpu_renderer": "Adreno (TM) 730",
+        "system_software": "Android OS 13 / API-33",
+        "screen_width": 720,
+        "screen_height": 2400,
+        "screen_dpi": "418",
+        "memory": 3022,
+        "processor_details": "ARM64 FP ASIMD AES VMH | 2215 | 6",
+        "client_ip": "111.144.245.211",
+        "android_id": "0bd9d63bfcb9bd17",
+        "gsf_id": "168e010ffb4a975e",
+        "build_fingerprint": "xiaomi/2203121c/2203121c:Android_OS_13/user/release-keys",
+        "serial_number": "abd981a2e2bf2f5d",
+        "hardware_id": "18ffd9bc7a9cfd2b"
+    },
+    "ce84b616b4f9b04729e9e8fecd54f7fa": {
+        "unique_device_id": "Google|89285f53-8a64-4314-96c2-4eac5401744e",
+        "brand": "OnePlus",
+        "model": "CPH2451",
+        "gpu_renderer": "Adreno (TM) 740",
+        "system_software": "Android OS 13 / API-33",
+        "screen_width": 1280,
+        "screen_height": 2400,
+        "screen_dpi": "406",
+        "memory": 3006,
+        "processor_details": "ARM64 FP ASIMD AES VMH | 2342 | 7",
+        "client_ip": "209.63.167.131",
+        "android_id": "f3f60ebf90735ba5",
+        "gsf_id": "87ad004160bbf770",
+        "build_fingerprint": "oneplus/cph2451/cph2451:Android_OS_13/user/release-keys",
+        "serial_number": "12016ede9d7a18fa",
+        "hardware_id": "70d38b9c47bdc5b1"
+    }
+}
