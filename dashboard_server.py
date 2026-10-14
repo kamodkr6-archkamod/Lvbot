@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-MASTER OFFICIAL - Web Dashboard Backend
+KAMOD - Web Dashboard Backend
 Full support for Pause/Resume + Uptime + Match Tracking + Human Mode
 + Login Gate (Session-based authentication)
 """
@@ -14,7 +14,7 @@ from aiohttp import web
 
 
 # ==================== AUTH CONFIG ====================
-DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "MASTERLV0.2")
+DASHBOARD_PASSWORD = os.environ.get("DASHBOARD_PASSWORD", "KAMODFREE")
 SESSION_TTL = 86400  # 24 hours
 SESSION_TOKENS: Dict[str, float] = {}  # {token: expiry_timestamp}
 
