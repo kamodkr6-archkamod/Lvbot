@@ -4,32 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
 <meta name="theme-color" content="#05060f">
-<title>MASTER | Level Up System</title>
+<title>KAMOD | Premium Level Up System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <style>
 /* ============================================================
-   MASTER PREMIUM THEME — Refined Color System
+   KAMOD PREMIUM THEME — Refined Color System
    ============================================================ */
 :root{
   /* Deep space base */
-  --bg:#040512;
-  --bg2:#0a0b1e;
-  --surf:rgba(18,20,44,.78);
-  --surf2:rgba(28,30,60,.92);
+  --bg:#090403;
+  --bg2:#160604;
+  --surf:rgba(20,8,7,.88);
+  --surf2:rgba(34,10,8,.94);
   --glass:rgba(255,255,255,.03);
 
   /* Borders */
-  --line:rgba(120,119,198,.14);
-  --line2:rgba(120,119,198,.38);
-  --line3:rgba(120,119,198,.6);
+  --line:rgba(255,190,30,.18);
+  --line2:rgba(255,190,30,.42);
+  --line3:rgba(255,190,30,.62);
 
   /* Text */
-  --text:#eef0ff;
-  --text2:#9ba0c9;
-  --text3:#5f6494;
+  --text:#fff6e5;
+  --text2:#c9b9a4;
+  --text3:#8d6e60;
 
   /* Status */
   --ok:#10d981;
@@ -40,17 +40,17 @@
   --match:#c084fc;
 
   /* Accents — refined */
-  --a1:#a78bfa;   /* violet */
-  --a2:#818cf8;   /* indigo */
-  --a3:#22d3ee;   /* cyan */
-  --a4:#f472b6;   /* pink */
+  --a1:#ff2638;   /* violet */
+  --a2:#ff4b19;   /* indigo */
+  --a3:#ffd21f;   /* cyan */
+  --a4:#ff4b19;   /* pink */
   --gold:#fbbf24;
 
   /* Gradients */
-  --grad:linear-gradient(135deg,#a78bfa 0%,#818cf8 50%,#22d3ee 100%);
-  --grad-2:linear-gradient(135deg,#f472b6 0%,#a78bfa 100%);
-  --grad-premium:linear-gradient(120deg,#a78bfa 0%,#818cf8 30%,#22d3ee 60%,#f472b6 100%);
-  --grad-soft:linear-gradient(135deg,rgba(167,139,250,.14),rgba(34,211,238,.08));
+  --grad:linear-gradient(135deg,#ffd21f 0%,#ff4b19 48%,#ff2638 100%);
+  --grad-2:linear-gradient(135deg,#ff4b19 0%,#ff2638 100%);
+  --grad-premium:linear-gradient(120deg,#ffd21f 0%,#ff4b19 45%,#ff2638 100%);
+  --grad-soft:linear-gradient(135deg,rgba(255,38,56,.14),rgba(255,210,31,.08));
   --grad-card:linear-gradient(145deg,rgba(30,32,68,.72),rgba(18,20,44,.9));
 
   /* Motion */
@@ -62,14 +62,14 @@
   --shadow-sm:0 4px 12px rgba(0,0,0,.3);
   --shadow:0 16px 40px rgba(0,0,0,.4);
   --shadow-lg:0 24px 60px rgba(0,0,0,.5);
-  --glow:0 0 40px rgba(167,139,250,.25);
+  --glow:0 0 40px rgba(255,38,56,.25);
 }
 
 /* Theme variants */
-[data-theme="cyan"]{--a1:#22d3ee;--a2:#06b6d4;--a3:#67e8f9;--a4:#0ea5e9;--grad:linear-gradient(135deg,#22d3ee,#0891b2);--grad-2:linear-gradient(135deg,#0891b2,#22d3ee);--grad-soft:linear-gradient(135deg,rgba(34,211,238,.14),rgba(8,145,178,.08))}
+[data-theme="cyan"]{--a1:#ffd21f;--a2:#06b6d4;--a3:#67e8f9;--a4:#0ea5e9;--grad:linear-gradient(135deg,#ffd21f,#0891b2);--grad-2:linear-gradient(135deg,#0891b2,#ffd21f);--grad-soft:linear-gradient(135deg,rgba(255,210,31,.14),rgba(8,145,178,.08))}
 [data-theme="emerald"]{--a1:#10d981;--a2:#059669;--a3:#34d399;--a4:#84cc16;--grad:linear-gradient(135deg,#10d981,#059669);--grad-2:linear-gradient(135deg,#059669,#10d981);--grad-soft:linear-gradient(135deg,rgba(16,217,129,.14),rgba(5,150,105,.08))}
 [data-theme="gold"]{--a1:#fbbf24;--a2:#f59e0b;--a3:#fcd34d;--a4:#fb923c;--grad:linear-gradient(135deg,#fbbf24,#f59e0b);--grad-2:linear-gradient(135deg,#f59e0b,#fbbf24);--grad-soft:linear-gradient(135deg,rgba(251,191,36,.14),rgba(245,158,11,.08))}
-[data-theme="rose"]{--a1:#f472b6;--a2:#ec4899;--a3:#fb7185;--a4:#c084fc;--grad:linear-gradient(135deg,#f472b6,#ec4899);--grad-2:linear-gradient(135deg,#ec4899,#f472b6);--grad-soft:linear-gradient(135deg,rgba(244,114,182,.14),rgba(236,72,153,.08))}
+[data-theme="rose"]{--a1:#ff4b19;--a2:#ec4899;--a3:#fb7185;--a4:#c084fc;--grad:linear-gradient(135deg,#ff4b19,#ec4899);--grad-2:linear-gradient(135deg,#ec4899,#ff4b19);--grad-soft:linear-gradient(135deg,rgba(255,75,25,.14),rgba(236,72,153,.08))}
 
 /* Light mode */
 [data-mode="light"]{
@@ -78,8 +78,8 @@
   --text:#141628;--text2:#5c6288;--text3:#8b90b8;
   --line:rgba(139,92,246,.18);--line2:rgba(139,92,246,.4);
   --grad-card:linear-gradient(145deg,rgba(255,255,255,.95),rgba(240,242,255,.9));
-  --shadow:0 12px 32px rgba(99,102,241,.1);
-  --shadow-lg:0 20px 50px rgba(99,102,241,.15);
+  --shadow:0 12px 32px rgba(255,38,56,.1);
+  --shadow-lg:0 20px 50px rgba(255,38,56,.15);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -97,15 +97,15 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(167,139,250,.28);border-radius:6px}
-::-webkit-scrollbar-thumb:hover{background:rgba(167,139,250,.5)}
+::-webkit-scrollbar-thumb{background:rgba(255,38,56,.28);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,38,56,.5)}
 
 /* ============================================================
    LOGIN GATE — Compact & Premium
    ============================================================ */
 #loginGate{
   position:fixed;inset:0;z-index:99999;
-  background:radial-gradient(ellipse 80% 60% at 50% 0%,#0c0e28 0%,#05061a 50%,#030410 100%);
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,#260707 0%,#100403 52%,#030202 100%);
   display:flex;align-items:center;justify-content:center;
   padding:16px;
   overflow:hidden;
@@ -117,9 +117,9 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 #loginGate::before{
   content:'';position:absolute;inset:-30%;pointer-events:none;
   background:
-    radial-gradient(circle at 25% 20%,rgba(167,139,250,.24),transparent 40%),
-    radial-gradient(circle at 75% 30%,rgba(34,211,238,.18),transparent 40%),
-    radial-gradient(circle at 50% 90%,rgba(244,114,182,.15),transparent 45%);
+    radial-gradient(circle at 25% 20%,rgba(255,38,56,.24),transparent 40%),
+    radial-gradient(circle at 75% 30%,rgba(255,210,31,.18),transparent 40%),
+    radial-gradient(circle at 50% 90%,rgba(255,75,25,.15),transparent 45%);
   animation:aurora 14s ease-in-out infinite alternate;
   filter:blur(30px);
 }
@@ -132,8 +132,8 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
   content:'';position:absolute;inset:0;pointer-events:none;opacity:.7;
   background-image:
     radial-gradient(1.2px 1.2px at 12% 18%, #fff, transparent 40%),
-    radial-gradient(1px 1px at 78% 32%, #a78bfa, transparent 40%),
-    radial-gradient(1.2px 1.2px at 42% 78%, #22d3ee, transparent 40%),
+    radial-gradient(1px 1px at 78% 32%, #ff2638, transparent 40%),
+    radial-gradient(1.2px 1.2px at 42% 78%, #ffd21f, transparent 40%),
     radial-gradient(1px 1px at 88% 12%, #fff, transparent 40%),
     radial-gradient(1px 1px at 25% 65%, #c4b5fd, transparent 40%),
     radial-gradient(1.2px 1.2px at 92% 82%, #fff, transparent 40%),
@@ -146,11 +146,11 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .login-card{
   position:relative;z-index:2;width:100%;max-width:360px;
   padding:22px 20px 18px;border-radius:22px;
-  background:linear-gradient(160deg,rgba(20,22,50,.85),rgba(10,11,30,.96));
-  border:1px solid rgba(167,139,250,.28);
+  background:linear-gradient(160deg,rgba(35,10,7,.96),rgba(8,4,3,.98));
+  border:1px solid rgba(255,38,56,.28);
   box-shadow:
     0 24px 60px rgba(0,0,0,.65),
-    0 0 60px rgba(167,139,250,.15),
+    0 0 60px rgba(255,38,56,.15),
     inset 0 0 0 1px rgba(255,255,255,.04);
   backdrop-filter:blur(24px);
   -webkit-backdrop-filter:blur(24px);
@@ -164,7 +164,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:var(--grad-premium);background-size:300% 100%;
   animation:stripFlow 4s linear infinite;
-  box-shadow:0 0 20px rgba(167,139,250,.6);
+  box-shadow:0 0 20px rgba(255,38,56,.6);
 }
 @keyframes stripFlow{to{background-position:300% 0}}
 
@@ -184,31 +184,31 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 }
 .login-logo .ring-outer{
   position:absolute;inset:0;border-radius:50%;
-  background:conic-gradient(from 0deg,#a78bfa,#22d3ee,#f472b6,#a78bfa);
+  background:conic-gradient(from 0deg,#ff2638,#ffd21f,#ff4b19,#ff2638);
   filter:blur(6px);opacity:.55;
   animation:ringSpin 4s linear infinite;
 }
 .login-logo .ring-mid{
   position:absolute;inset:7px;border-radius:50%;
-  border:1.2px dashed rgba(167,139,250,.55);
+  border:1.2px dashed rgba(255,38,56,.55);
   animation:ringSpin 10s linear infinite reverse;
 }
 .login-logo .core{
   position:relative;z-index:2;width:56px;height:56px;border-radius:50%;
-  background:radial-gradient(circle at 30% 30%,#1c1e40,#0a0b1e);
-  border:1.5px solid rgba(167,139,250,.7);
+  background:radial-gradient(circle at 30% 30%,#32110a,#160604);
+  border:1.5px solid rgba(255,38,56,.7);
   display:grid;place-items:center;
-  box-shadow:0 0 28px rgba(167,139,250,.55),inset 0 0 16px rgba(34,211,238,.28);
+  box-shadow:0 0 28px rgba(255,38,56,.55),inset 0 0 16px rgba(255,210,31,.28);
   animation:corePulse 2.6s ease-in-out infinite;
 }
-@keyframes corePulse{50%{box-shadow:0 0 42px rgba(167,139,250,.85),inset 0 0 22px rgba(34,211,238,.5)}}
+@keyframes corePulse{50%{box-shadow:0 0 42px rgba(255,38,56,.85),inset 0 0 22px rgba(255,210,31,.5)}}
 @keyframes ringSpin{to{transform:rotate(360deg)}}
 .login-logo svg{width:30px;height:30px}
 .login-logo svg path{
   fill:none;stroke:url(#mGrad);stroke-width:9;
   stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:120;stroke-dashoffset:120;
-  filter:drop-shadow(0 0 4px rgba(167,139,250,.9));
+  filter:drop-shadow(0 0 4px rgba(255,38,56,.9));
   animation:mDraw 3.6s ease-in-out infinite;
 }
 @keyframes mDraw{
@@ -221,7 +221,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .login-title{
   text-align:center;font-family:'Orbitron',sans-serif;font-weight:900;
   font-size:17px;letter-spacing:2px;margin-bottom:3px;
-  background:linear-gradient(90deg,#fff,#c4b5fd,#22d3ee,#fff);
+  background:linear-gradient(90deg,#fff6e5,#ffd21f,#ff2638,#fff6e5);
   background-size:250% 100%;
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -271,13 +271,13 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .pwd-wrap input{
   width:100%;padding:13px 40px 13px 36px;border-radius:11px;
   background:rgba(5,6,20,.65);
-  border:1.5px solid rgba(167,139,250,.22);
+  border:1.5px solid rgba(255,38,56,.22);
   font-size:14px;font-weight:600;letter-spacing:2px;color:var(--text);
   transition:var(--ease);
 }
 .pwd-wrap input:focus{
   border-color:var(--a1);
-  box-shadow:0 0 0 3px rgba(167,139,250,.15),0 0 22px rgba(167,139,250,.3);
+  box-shadow:0 0 0 3px rgba(255,38,56,.15),0 0 22px rgba(255,38,56,.3);
   background:rgba(5,6,20,.9);
 }
 .pwd-wrap input::placeholder{color:var(--text3);letter-spacing:3px}
@@ -289,12 +289,12 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 
 .login-btn{
   width:100%;padding:12.5px;border-radius:11px;margin-bottom:9px;
-  background:linear-gradient(135deg,#6366f1 0%,#a78bfa 50%,#22d3ee 100%);
+  background:linear-gradient(110deg,#ffd21f 0%,#ff4b19 48%,#ff2638 100%);
   background-size:200% 100%;
   color:#fff;font-family:'Orbitron',sans-serif;
   font-weight:800;font-size:11px;letter-spacing:1.5px;
   display:flex;align-items:center;justify-content:center;gap:8px;
-  box-shadow:0 8px 22px rgba(99,102,241,.45);
+  box-shadow:0 8px 22px rgba(255,38,56,.45);
   transition:var(--ease-spring);
   position:relative;overflow:hidden;
   text-transform:uppercase;
@@ -307,7 +307,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 @keyframes shine{0%{left:-100%}50%{left:100%}100%{left:100%}}
 .login-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 12px 30px rgba(167,139,250,.65);
+  box-shadow:0 12px 30px rgba(255,38,56,.65);
   background-position:100% 0;
 }
 .login-btn:active{transform:translateY(0) scale(.98)}
@@ -315,15 +315,15 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 
 .login-btn.secondary{
   background:transparent;
-  border:1.5px solid rgba(167,139,250,.35);
+  border:1.5px solid rgba(255,38,56,.35);
   color:var(--a1);box-shadow:none;
   font-size:10px;letter-spacing:1.5px;padding:11px;
 }
 .login-btn.secondary::before{display:none}
 .login-btn.secondary:hover{
-  background:rgba(167,139,250,.08);
+  background:rgba(255,38,56,.08);
   border-color:var(--a1);
-  box-shadow:0 0 18px rgba(167,139,250,.3);
+  box-shadow:0 0 18px rgba(255,38,56,.3);
   transform:translateY(-1px);
 }
 
@@ -342,8 +342,8 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .login-chips{display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap}
 .login-chip{
   padding:4px 9px;border-radius:99px;font-size:8px;font-weight:700;
-  background:rgba(167,139,250,.07);
-  border:1px solid rgba(167,139,250,.22);
+  background:rgba(255,38,56,.07);
+  border:1px solid rgba(255,38,56,.22);
   color:var(--text2);letter-spacing:1px;
   font-family:'JetBrains Mono',monospace;
   display:inline-flex;align-items:center;gap:4px;
@@ -352,7 +352,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 
 .login-footer{
   text-align:center;margin-top:12px;padding-top:10px;
-  border-top:1px solid rgba(167,139,250,.12);
+  border-top:1px solid rgba(255,38,56,.12);
   font-family:'Orbitron',sans-serif;
   font-size:7.5px;font-weight:700;
   letter-spacing:2px;color:var(--text3);
@@ -371,9 +371,9 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .bg::before{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 70% 50% at 15% 0%,rgba(167,139,250,.2),transparent 50%),
-    radial-gradient(ellipse 60% 45% at 85% 100%,rgba(34,211,238,.16),transparent 50%),
-    radial-gradient(ellipse 50% 60% at 50% 50%,rgba(244,114,182,.06),transparent 60%);
+    radial-gradient(ellipse 70% 50% at 15% 0%,rgba(255,38,56,.2),transparent 50%),
+    radial-gradient(ellipse 60% 45% at 85% 100%,rgba(255,210,31,.16),transparent 50%),
+    radial-gradient(ellipse 50% 60% at 50% 50%,rgba(255,75,25,.06),transparent 60%);
   animation:bgShift 25s ease-in-out infinite alternate;
 }
 @keyframes bgShift{
@@ -383,8 +383,8 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .bg::after{
   content:'';position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(139,148,255,.035) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(139,148,255,.035) 1px,transparent 1px);
+    linear-gradient(rgba(255,190,30,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,190,30,.035) 1px,transparent 1px);
   background-size:48px 48px;
   -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 70%);
   mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 70%);
@@ -421,14 +421,14 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
   width:48px;height:48px;border-radius:14px;flex-shrink:0;position:relative;
   background:var(--grad-premium);background-size:300% 300%;
   display:grid;place-items:center;
-  box-shadow:0 8px 22px rgba(167,139,250,.5),inset 0 0 0 1px rgba(255,255,255,.15);
+  box-shadow:0 8px 22px rgba(255,38,56,.5),inset 0 0 0 1px rgba(255,255,255,.15);
   animation:logoSpin 5s linear infinite;
 }
 @keyframes logoSpin{to{background-position:300% 300%}}
 .logo-mark::after{
   content:'';position:absolute;inset:-2px;border-radius:16px;
   border:1.5px solid transparent;
-  background:conic-gradient(from 0deg,#a78bfa,#22d3ee,#f472b6,#a78bfa) border-box;
+  background:conic-gradient(from 0deg,#ff2638,#ffd21f,#ff4b19,#ff2638) border-box;
   -webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;mask-composite:exclude;
   animation:ringSpin 4s linear infinite;
@@ -446,7 +446,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .logo h1{
   font-family:'Orbitron',sans-serif;font-weight:900;
   font-size:17px;letter-spacing:1.5px;
-  background:linear-gradient(90deg,#fff,#c4b5fd,#22d3ee,#fff);
+  background:linear-gradient(90deg,#fff6e5,#ffd21f,#ff2638,#fff6e5);
   background-size:250% 100%;
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -480,7 +480,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
   width:16px;font-size:13px;text-align:center;
   transition:transform .3s var(--ease-spring);
 }
-.nav-btn:hover{color:var(--text);background:rgba(167,139,250,.07)}
+.nav-btn:hover{color:var(--text);background:rgba(255,38,56,.07)}
 .nav-btn:hover i{transform:scale(1.15)}
 .nav-btn.on{
   color:#fff;
@@ -497,7 +497,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 @keyframes slideIn{from{transform:scaleY(0)}}
 .nav-btn .badge-n{
   margin-left:auto;
-  background:rgba(167,139,250,.18);
+  background:rgba(255,38,56,.18);
   color:var(--a3);
   font-size:9.5px;font-weight:800;
   padding:2px 7px;border-radius:99px;
@@ -533,11 +533,11 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 }
 .tdot:hover{transform:scale(1.2)}
 .tdot.on{border-color:#fff;box-shadow:0 0 10px currentColor;transform:scale(1.12)}
-.tdot.violet{background:linear-gradient(135deg,#a78bfa,#22d3ee);color:#a78bfa}
-.tdot.cyan{background:linear-gradient(135deg,#22d3ee,#0891b2);color:#22d3ee}
+.tdot.violet{background:linear-gradient(135deg,#ff2638,#ffd21f);color:#ff2638}
+.tdot.cyan{background:linear-gradient(135deg,#ffd21f,#0891b2);color:#ffd21f}
 .tdot.emerald{background:linear-gradient(135deg,#10d981,#059669);color:#10d981}
 .tdot.gold{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fbbf24}
-.tdot.rose{background:linear-gradient(135deg,#f472b6,#ec4899);color:#f472b6}
+.tdot.rose{background:linear-gradient(135deg,#ff4b19,#ec4899);color:#ff4b19}
 
 /* ============================================================
    MAIN
@@ -632,7 +632,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .btn.pri{
   background:var(--grad);
   border:0;color:#fff;
-  box-shadow:0 6px 18px rgba(167,139,250,.4);
+  box-shadow:0 6px 18px rgba(255,38,56,.4);
   position:relative;overflow:hidden;
 }
 .btn.pri::before{
@@ -640,9 +640,13 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
   animation:shine 4s infinite;
 }
-.btn.pri:hover{box-shadow:0 10px 26px rgba(167,139,250,.6)}
+.btn.pri:hover{box-shadow:0 10px 26px rgba(255,38,56,.6)}
 .btn.ghost{background:transparent}
 .btn:disabled{opacity:.4;cursor:not-allowed;transform:none!important}
+.bulk-import-panel{padding:12px;border:1px dashed var(--line2);border-radius:12px;background:var(--grad-soft);margin-top:12px}
+.bulk-import-panel input[type=file]{display:block;width:100%;padding:9px;margin:7px 0;border:1px solid var(--line);border-radius:9px;background:var(--surf);font-size:11px}
+.bulk-import-panel small{display:block;color:var(--text2);line-height:1.5;margin:4px 0 10px}
+.bulk-import-panel .btn{width:100%;justify-content:center}
 .btn.danger{color:var(--err);border-color:rgba(244,113,116,.3)}
 .btn.danger:hover{background:rgba(244,113,116,.1);border-color:var(--err)}
 
@@ -657,13 +661,13 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .welcome{
   position:relative;padding:18px 22px;border-radius:16px;
   overflow:hidden;margin-bottom:18px;
-  background:linear-gradient(135deg,rgba(167,139,250,.13),rgba(34,211,238,.08),rgba(244,114,182,.05));
+  background:linear-gradient(135deg,rgba(255,38,56,.13),rgba(255,210,31,.08),rgba(255,75,25,.05));
   border:1px solid var(--line2);
 }
 .welcome::before{
   content:'';position:absolute;top:-50%;right:-10%;width:280px;height:280px;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(167,139,250,.28),transparent 70%);
+  background:radial-gradient(circle,rgba(255,38,56,.28),transparent 70%);
   pointer-events:none;
   animation:floaty 6s ease-in-out infinite;
 }
@@ -676,14 +680,14 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
   width:50px;height:50px;border-radius:14px;flex-shrink:0;
   background:var(--grad-premium);background-size:300% 300%;
   display:grid;place-items:center;color:#fff;font-size:22px;
-  box-shadow:0 8px 22px rgba(167,139,250,.5);
+  box-shadow:0 8px 22px rgba(255,38,56,.5);
   animation:logoSpin 5s linear infinite;
 }
 .welcome-text h3{
   font-family:'Orbitron',sans-serif;
   font-size:16px;font-weight:800;letter-spacing:.8px;
   margin-bottom:3px;
-  background:linear-gradient(90deg,#fff,#c4b5fd,#22d3ee);
+  background:linear-gradient(90deg,#fff6e5,#ffd21f,#ff2638);
   background-size:200% 100%;
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -723,12 +727,12 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .stat:hover{
   transform:translateY(-3px);
   border-color:var(--line2);
-  box-shadow:0 12px 28px rgba(167,139,250,.18);
+  box-shadow:0 12px 28px rgba(255,38,56,.18);
 }
 .stat::before{
   content:'';position:absolute;top:-40%;right:-30%;width:160px;height:160px;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(167,139,250,.2),transparent 70%);
+  background:radial-gradient(circle,rgba(255,38,56,.2),transparent 70%);
   pointer-events:none;
 }
 .s-icon{
@@ -821,7 +825,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 }
 .search input:focus{
   border-color:var(--line2);
-  box-shadow:0 0 0 3px rgba(167,139,250,.13);
+  box-shadow:0 0 0 3px rgba(255,38,56,.13);
 }
 .seg{
   display:flex;padding:3px;border-radius:10px;
@@ -839,7 +843,7 @@ button{cursor:pointer;-webkit-user-select:none;user-select:none}
 .seg button:hover{color:var(--text)}
 .seg button.on{
   color:#fff;background:var(--grad);
-  box-shadow:0 4px 12px rgba(167,139,250,.35);
+  box-shadow:0 4px 12px rgba(255,38,56,.35);
 }
 .seg button .cnt{
   background:rgba(255,255,255,.18);
@@ -902,10 +906,10 @@ select.mini:hover{border-color:var(--line2)}
 .card:hover{
   transform:translateY(-3px);
   border-color:var(--line2);
-  box-shadow:0 14px 34px rgba(167,139,250,.22);
+  box-shadow:0 14px 34px rgba(255,38,56,.22);
 }
 .card.paused{opacity:.7}
-.card.paused::before{background:linear-gradient(180deg,#9ba0c9,#5f6494)}
+.card.paused::before{background:linear-gradient(180deg,#c9b9a4,#8d6e60)}
 .card.selected{outline:2px solid var(--a1);outline-offset:2px}
 
 .card.compact{padding:11px}
@@ -1017,11 +1021,11 @@ select.mini:hover{border-color:var(--line2)}
   animation:matchGlow 2s ease-in-out infinite;
 }
 @keyframes matchGlow{50%{box-shadow:0 0 12px rgba(96,165,250,.55)}}
-.b-search{color:var(--a3);background:rgba(34,211,238,.12);border-color:rgba(34,211,238,.35)}
+.b-search{color:var(--a3);background:rgba(255,210,31,.12);border-color:rgba(255,210,31,.35)}
 .b-paused{color:var(--text2);background:rgba(155,160,201,.1);border-color:rgba(155,160,201,.35)}
 .b-wait{color:var(--warn);background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.4)}
 .b-err{color:var(--warn);background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.35)}
-.b-mode{color:var(--a1);background:rgba(167,139,250,.12);border-color:rgba(167,139,250,.3)}
+.b-mode{color:var(--a1);background:rgba(255,38,56,.12);border-color:rgba(255,38,56,.3)}
 .b-region{
   color:var(--ok);background:rgba(16,217,129,.1);
   border-color:rgba(16,217,129,.3);
@@ -1039,7 +1043,7 @@ select.mini:hover{border-color:var(--line2)}
   min-width:0;transition:border-color .2s;
 }
 [data-mode="light"] .metric{background:rgba(240,242,255,.6)}
-.metric:hover{border-color:rgba(167,139,250,.28)}
+.metric:hover{border-color:rgba(255,38,56,.28)}
 .metric .lbl{
   font-size:9px;color:var(--text2);
   font-weight:600;margin-bottom:2px;display:block;
@@ -1063,13 +1067,13 @@ select.mini:hover{border-color:var(--line2)}
   background:rgba(4,5,18,.65);
   overflow:hidden;
 }
-[data-mode="light"] .prog-track{background:rgba(139,148,255,.15)}
+[data-mode="light"] .prog-track{background:rgba(255,190,30,.15)}
 .prog-fill{
   height:100%;border-radius:99px;
   background:var(--grad-premium);
   background-size:200% 100%;
   transition:width .8s ease;
-  box-shadow:0 0 10px rgba(167,139,250,.55);
+  box-shadow:0 0 10px rgba(255,38,56,.55);
   animation:progFlow 3s linear infinite;
 }
 @keyframes progFlow{to{background-position:200% 0}}
@@ -1147,9 +1151,9 @@ select.mini:hover{border-color:var(--line2)}
 .skel-line{
   height:11px;border-radius:6px;
   background:linear-gradient(90deg,
-    rgba(167,139,250,.06),
-    rgba(167,139,250,.16),
-    rgba(167,139,250,.06));
+    rgba(255,38,56,.06),
+    rgba(255,38,56,.16),
+    rgba(255,38,56,.06));
   background-size:200% 100%;
   animation:skelFlow 1.5s ease-in-out infinite;
   margin-bottom:9px;
@@ -1206,7 +1210,7 @@ select.mini:hover{border-color:var(--line2)}
   border-radius:6px;margin-bottom:1px;
   cursor:pointer;transition:background .15s;
 }
-.line:hover{background:rgba(167,139,250,.07)}
+.line:hover{background:rgba(255,38,56,.07)}
 .line .ts{color:var(--a1);flex-shrink:0;font-size:10px}
 .line .ic{flex-shrink:0;width:14px;text-align:center;font-size:10px}
 .line .msg{flex:1;word-break:break-word;color:var(--text)}
@@ -1273,7 +1277,7 @@ select.mini:hover{border-color:var(--line2)}
 }
 .field input:focus,.field select:focus,.field textarea:focus{
   border-color:var(--line2);
-  box-shadow:0 0 0 3px rgba(167,139,250,.13);
+  box-shadow:0 0 0 3px rgba(255,38,56,.13);
 }
 .field select option{background:var(--bg2);color:var(--text)}
 .modal-actions{
@@ -1360,7 +1364,7 @@ body.nav-open .nav-overlay{display:block}
   .mobile-brand{
     font-family:'Orbitron',sans-serif;
     font-weight:900;font-size:14px;letter-spacing:1.5px;
-    background:linear-gradient(90deg,#fff,#a78bfa,#22d3ee);
+    background:linear-gradient(90deg,#fff,#ff2638,#ffd21f);
     background-size:200% 100%;
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;
@@ -1424,6 +1428,71 @@ body.nav-open .nav-overlay{display:block}
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
+
+/* KAMOD: premium crimson + gold theme */
+:root{--a1:#ff2638;--a2:#d9102c;--a3:#ffd21f;--a4:#ff4b19;--gold:#ffd21f;--grad:linear-gradient(120deg,#ffd21f 0%,#ff4b19 48%,#ff2638 100%);--grad-2:linear-gradient(135deg,#ff2638,#ffd21f);--grad-premium:linear-gradient(120deg,#ffd21f 0%,#ff4b19 48%,#ff2638 100%);--grad-soft:linear-gradient(135deg,rgba(255,38,56,.16),rgba(255,210,31,.10));--line:rgba(255,190,30,.18);--line2:rgba(255,190,30,.42);--line3:rgba(255,190,30,.62);--glow:0 0 40px rgba(255,38,56,.25)}
+body{background-image:radial-gradient(ellipse at 10% 0%,rgba(255,38,56,.13),transparent 42%),radial-gradient(ellipse at 90% 100%,rgba(255,210,31,.10),transparent 40%)}
+.welcome{background:linear-gradient(120deg,rgba(255,38,56,.20),rgba(255,75,25,.10),rgba(255,210,31,.12));border-color:rgba(255,190,30,.45);box-shadow:inset 0 0 28px rgba(255,38,56,.08),0 10px 30px rgba(0,0,0,.2)}
+.btn.pri,.login-btn{background:linear-gradient(110deg,#ffd21f 0%,#ff4b19 48%,#ff1738 100%);color:#160604;box-shadow:0 7px 24px rgba(255,38,56,.30),0 0 18px rgba(255,210,31,.15)}
+.btn.pri:hover,.login-btn:hover{box-shadow:0 10px 30px rgba(255,38,56,.45)}
+.bulk-import-panel{border-color:rgba(255,210,31,.55);background:linear-gradient(135deg,rgba(255,38,56,.13),rgba(255,210,31,.08));box-shadow:inset 0 0 22px rgba(255,38,56,.06)}
+.stat,.card,.pod{border-color:rgba(255,190,30,.20)}
+.stat:hover,.card:hover{border-color:rgba(255,210,31,.55);box-shadow:0 14px 34px rgba(255,38,56,.16)}
+.section-title{color:#ffd977}
+
+
+/* KAMOD: fixed premium red / yellow / black skin */
+:root{
+ --bg:#080403;--bg2:#120705;--surf:rgba(20,8,7,.92);--surf2:rgba(34,10,8,.96);
+ --line:rgba(255,190,20,.22);--line2:rgba(255,190,20,.55);--line3:rgba(255,190,20,.78);
+ --text:#fff8eb;--text2:#cbbcae;--text3:#8d7567;
+ --a1:#ff2438;--a2:#e50924;--a3:#ffd21f;--a4:#ff4b19;--gold:#ffd21f;
+ --grad:linear-gradient(115deg,#ffd21f 0%,#ff8a00 42%,#ff1738 100%);
+ --grad-2:linear-gradient(115deg,#ff1738,#ffd21f);
+ --grad-premium:linear-gradient(115deg,#ffd21f,#ff8a00,#ff1738);
+ --grad-soft:linear-gradient(135deg,rgba(255,210,31,.13),rgba(255,23,56,.12));
+ --grad-card:linear-gradient(145deg,rgba(30,12,9,.96),rgba(10,5,4,.98));
+ --glow:0 0 34px rgba(255,36,56,.22);
+}
+html,body{background:#080403}
+.bg::before{background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(255,28,48,.25),transparent 55%),radial-gradient(ellipse 60% 45% at 85% 100%,rgba(255,190,20,.18),transparent 55%)}
+.logo h1,.mobile-brand{background:linear-gradient(90deg,#ffd21f,#fff4cf,#ff2438);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.welcome{background:linear-gradient(115deg,rgba(255,28,48,.22),rgba(255,190,20,.10),rgba(12,5,4,.95));border-color:rgba(255,190,20,.65);box-shadow:0 0 28px rgba(255,28,48,.12),inset 0 0 24px rgba(255,190,20,.04)}
+.welcome::before{background:radial-gradient(circle,rgba(255,28,48,.3),transparent 70%)}
+.welcome-icon,.logo-mark,.s-icon{background:linear-gradient(135deg,#ffd21f,#ff8a00 48%,#ff1738);box-shadow:0 0 22px rgba(255,36,56,.35)}
+.welcome-text h3{background:linear-gradient(90deg,#fff,#ffd21f,#ff3348);-webkit-background-clip:text;background-clip:text}
+.stat,.pod,.card{box-shadow:inset 0 1px rgba(255,255,255,.025)}
+.stat:hover,.card:hover{box-shadow:0 12px 30px rgba(255,28,48,.18);border-color:rgba(255,210,31,.65)}
+.btn.pri,.seg button.on{background:linear-gradient(110deg,#ffd21f,#ff8a00 48%,#ff1738);color:#160604;box-shadow:0 7px 22px rgba(255,28,48,.28)}
+.btn.pri:hover{box-shadow:0 10px 28px rgba(255,28,48,.42)}
+.pod.first{border-color:#ffd21f;background:linear-gradient(160deg,rgba(255,190,20,.2),rgba(28,10,7,.94));box-shadow:0 0 28px rgba(255,190,20,.18)}
+.section-title{color:#ffe08a}
+.bulk-import-panel{border-color:rgba(255,190,20,.5);background:linear-gradient(135deg,rgba(255,30,48,.1),rgba(255,190,20,.08))}
+@media(max-width:700px){.content{padding:14px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.welcome{padding:16px}.welcome-stats{width:100%;justify-content:space-around;margin-left:0}.topbar .brand-chip{display:none}}
+
+
+.km-quick-actions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:2px 0 14px}
+.km-action{min-width:0;min-height:76px;border:1px solid rgba(255,190,20,.55);border-radius:13px;background:linear-gradient(145deg,rgba(255,25,48,.2),rgba(12,5,4,.96));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:800;transition:transform .2s,box-shadow .2s}
+.km-action i{font-size:22px;color:#ff3448;text-shadow:0 0 14px rgba(255,35,56,.55)}
+.km-action.gold{background:linear-gradient(145deg,rgba(255,190,20,.2),rgba(12,5,4,.96))}
+.km-action.gold i{color:#ffd21f;text-shadow:0 0 14px rgba(255,190,20,.5)}
+.km-action:hover{transform:translateY(-3px);box-shadow:0 0 22px rgba(255,35,56,.22)}
+.km-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.km-feature{padding:17px;border-radius:15px;border:1px solid rgba(255,35,56,.58);background:linear-gradient(145deg,rgba(35,10,8,.96),rgba(9,5,4,.98));box-shadow:inset 0 0 24px rgba(255,35,56,.05),0 0 16px rgba(255,35,56,.07)}
+.km-feature.premium{border-color:rgba(255,190,20,.58);box-shadow:inset 0 0 24px rgba(255,190,20,.04)}
+.km-feature h3{font-size:14px;margin-bottom:7px;color:#fff;display:flex;gap:9px;align-items:center}
+.km-feature h3 i{color:#ffd21f;font-size:19px}
+.km-feature p,.km-feature small{display:block;color:var(--text2);font-size:11px;line-height:1.55;margin-bottom:10px}
+.km-feature input[type=file]{width:100%;font-size:11px;padding:9px;border-radius:9px;border:1px solid rgba(255,190,20,.35);background:rgba(0,0,0,.25);margin:3px 0 10px}
+.km-feature .btn{width:100%;justify-content:center;margin-bottom:8px}
+#bulkImportStatusDash{font-size:11px;color:var(--a3);margin:4px 0 8px;overflow-wrap:anywhere}
+.km-feature ul{padding-left:20px;color:var(--text2);font-size:11px;line-height:1.9;margin:7px 0 12px}
+.km-status-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 16px}
+.km-status-row>div{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(255,190,20,.38);border-radius:12px;background:linear-gradient(110deg,rgba(255,190,20,.1),rgba(15,7,5,.9))}
+.km-status-row>div>i{font-size:22px;color:#ffd21f}.km-status-row span{display:flex;flex-direction:column;gap:2px}.km-status-row small{color:var(--text2);font-size:10px}
+@media(max-width:700px){.km-quick-actions{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.km-action{min-height:68px;font-size:9px;padding:5px 2px}.km-action i{font-size:19px}.km-feature-grid,.km-status-row{grid-template-columns:1fr}.km-feature{padding:14px}}
+@media(max-width:390px){.km-quick-actions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
 </style>
 </head>
 <body>
@@ -1432,9 +1501,9 @@ body.nav-open .nav-overlay{display:block}
 <svg width="0" height="0" style="position:absolute">
   <defs>
     <linearGradient id="mGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#a78bfa"/>
-      <stop offset="50%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#f472b6"/>
+      <stop offset="0%" stop-color="#ff2638"/>
+      <stop offset="50%" stop-color="#ffd21f"/>
+      <stop offset="100%" stop-color="#ff4b19"/>
     </linearGradient>
   </defs>
 </svg>
@@ -1454,7 +1523,7 @@ body.nav-open .nav-overlay{display:block}
       </div>
     </div>
 
-    <div class="login-title">MASTER OFFICIAL</div>
+    <div class="login-title">KAMOD</div>
     <div class="login-sub">COMMAND CENTER</div>
     <div class="secure-pill"><span class="dot"></span> SECURE ACCESS</div>
 
@@ -1475,7 +1544,7 @@ body.nav-open .nav-overlay{display:block}
       </button>
     </form>
 
-    <button class="login-btn secondary" onclick="window.open('https://t.me/MASTER_FF_01','_blank')">
+    <button class="login-btn secondary" onclick="window.open('https://t.me/KAMOD_FF_01','_blank')">
       <i class="fa-brands fa-telegram"></i> CONTACT OWNER
     </button>
 
@@ -1487,7 +1556,7 @@ body.nav-open .nav-overlay{display:block}
 
     <div class="login-footer">
       PROTECTED ACCESS · <span class="brand">PREMIUM</span>
-      <span class="v2">✈ @MASTER_FF_01 · LEVEL UP SYSTEM</span>
+      <span class="v2">✈ @KAMOD_FF_01 · LEVEL UP SYSTEM</span>
     </div>
   </div>
 </div>
@@ -1503,7 +1572,7 @@ body.nav-open .nav-overlay{display:block}
         </svg>
       </div>
       <div class="logo-text-wrap">
-        <h1>MASTER</h1>
+        <h1>KAMOD</h1>
         <div class="logo-tag"><i class="fa-solid fa-circle"></i> LEVEL UP</div>
       </div>
       <div class="logo-badge">PRO</div>
@@ -1532,7 +1601,7 @@ body.nav-open .nav-overlay{display:block}
         <i class="fa-solid fa-right-from-bracket" style="margin-left:auto;font-size:10px;opacity:.55"></i>
       </div>
       <div class="themes">
-        <div class="tdot violet on" data-theme="violet" title="Violet"></div>
+        <div class="tdot gold on" data-theme="gold" title="Gold"></div>
         <div class="tdot cyan" data-theme="cyan" title="Cyan"></div>
         <div class="tdot emerald" data-theme="emerald" title="Emerald"></div>
         <div class="tdot gold" data-theme="gold" title="Gold"></div>
@@ -1545,7 +1614,7 @@ body.nav-open .nav-overlay{display:block}
   <div class="main">
     <div class="mobile-top">
       <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
-      <div class="mobile-brand">MASTER<small>LEVEL UP SYSTEM</small></div>
+      <div class="mobile-brand">KAMOD<small>LEVEL UP SYSTEM</small></div>
     </div>
 
     <div class="topbar">
@@ -1554,7 +1623,7 @@ body.nav-open .nav-overlay{display:block}
         <div class="sub"><span class="sync-dot" id="syncDot"></span><span id="pageSub">Real-time analytics</span> • <span id="syncTime">Syncing...</span></div>
       </div>
       <div class="actions">
-        <div class="brand-chip"><i class="fa-solid fa-crown"></i>MASTER OFFICIAL</div>
+        <div class="brand-chip"><i class="fa-solid fa-crown"></i>KAMOD OFFICIAL</div>
         <button class="icon-btn" id="themeBtn" title="Toggle Light/Dark"><i class="fa-solid fa-moon"></i></button>
         <button class="icon-btn" id="refreshBtn" title="Refresh"><i class="fa-solid fa-rotate"></i></button>
         <button class="btn pri" id="addBtn" title="Add Account"><i class="fa-solid fa-plus"></i>Add Account</button>
@@ -1569,7 +1638,7 @@ body.nav-open .nav-overlay{display:block}
           <div class="welcome-inner">
             <div class="welcome-icon"><i class="fa-solid fa-crown"></i></div>
             <div class="welcome-text">
-              <h3>WELCOME TO MASTER LEVEL UP</h3>
+              <h3>WELCOME TO KAMOD</h3>
               <p>Automated Lone Wolf leveling (Lv3+ accounts) with human-like behavior and real-time analytics.</p>
             </div>
             <div class="welcome-stats">
@@ -1605,6 +1674,34 @@ body.nav-open .nav-overlay{display:block}
             <div class="s-lbl">System Uptime</div>
             <div class="s-foot" id="s-act">0 active</div>
           </div>
+        </div>
+
+        <div class="km-quick-actions">
+          <button class="km-action red" id="kmAddAction"><i class="fa-solid fa-circle-plus"></i><span>Add Account</span></button>
+          <button class="km-action gold" id="kmBulkAction"><i class="fa-solid fa-file-arrow-up"></i><span>Bulk Import</span></button>
+          <button class="km-action red" id="kmAccountsAction"><i class="fa-solid fa-list"></i><span>Manage Accounts</span></button>
+          <button class="km-action gold" id="kmLogsAction"><i class="fa-solid fa-terminal"></i><span>Live Logs</span></button>
+          <button class="km-action red" id="kmProfileAction"><i class="fa-solid fa-crown"></i><span>Profile</span></button>
+        </div>
+        <div class="km-feature-grid">
+          <section class="km-feature">
+            <h3><i class="fa-solid fa-file-arrow-up"></i> Bulk Add Accounts (JSON)</h3>
+            <p>Choose a JSON file containing multiple UID and password pairs. Existing accounts are kept.</p>
+            <input id="bulkJsonFileDash" type="file" accept=".json,application/json">
+            <button type="button" class="btn pri" id="bulkImportBtnDash"><i class="fa-solid fa-cloud-arrow-up"></i> Upload & Import JSON</button>
+            <div id="bulkImportStatusDash" aria-live="polite"></div>
+            <small>Format: [{"uid":"123456","password":"your-password"}]</small>
+          </section>
+          <section class="km-feature premium">
+            <h3><i class="fa-solid fa-crown"></i> Premium Dashboard</h3>
+            <p>Enhanced controls and system overview in your KAMOD theme.</p>
+            <ul><li>Red & gold neon styling</li><li>Live account statistics</li><li>Bulk JSON import controls</li><li>Account management shortcuts</li><li>Recent activity and runtime status</li></ul>
+            <button type="button" class="btn pri" id="kmPremiumInfo"><i class="fa-solid fa-shield-halved"></i> Premium Overview</button>
+          </section>
+        </div>
+        <div class="km-status-row">
+          <div><i class="fa-solid fa-server"></i><span><b>Server Dashboard</b><small>Connected to existing backend</small></span></div>
+          <div><i class="fa-solid fa-chart-line"></i><span><b>Real-time Analytics</b><small>Uses live dashboard statistics</small></span></div>
         </div>
 
         <div class="section-title"><i class="fa-solid fa-trophy" style="color:var(--gold)"></i> Top Harvesters</div>
@@ -1676,7 +1773,7 @@ body.nav-open .nav-overlay{display:block}
         <div class="terminal">
           <div class="term-head">
             <div class="term-dots"><span></span><span></span><span></span></div>
-            <div class="term-title">master@levelup:~#</div>
+            <div class="term-title">KAMOD@levelup:~#</div>
             <div class="spacer"></div>
             <input class="term-search" id="logSearch" placeholder="search...">
           </div>
@@ -1690,8 +1787,8 @@ body.nav-open .nav-overlay{display:block}
           <div class="welcome-inner">
             <div class="welcome-icon"><i class="fa-solid fa-user-shield"></i></div>
             <div class="welcome-text">
-              <h3>MASTER ADMINISTRATOR</h3>
-              <p>Full access to system operations, account management, and real-time monitoring. Powered by MASTER Level Up Engine v0.2</p>
+              <h3>KAMOD ADMINISTRATOR</h3>
+              <p>Full access to system operations, account management, and real-time monitoring. Powered by KAMOD Level Up Engine v0.2</p>
             </div>
           </div>
         </div>
@@ -1702,7 +1799,7 @@ body.nav-open .nav-overlay{display:block}
           <div class="stat"><div class="s-icon"><i class="fa-solid fa-gauge-high"></i></div><div class="s-val" id="p-rate" data-count="0">0</div><div class="s-lbl">EXP / hour</div></div>
         </div>
         <div style="padding:4px 20px;border-radius:14px;background:var(--surf);border:1px solid var(--line)">
-          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)"><span style="color:var(--text2);font-size:12px">System Name</span><b style="font-family:'Orbitron',sans-serif;letter-spacing:.8px;font-size:12.5px">MASTER LEVEL UP</b></div>
+          <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)"><span style="color:var(--text2);font-size:12px">System Name</span><b style="font-family:'Orbitron',sans-serif;letter-spacing:.8px;font-size:12.5px">KAMOD</b></div>
           <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)"><span style="color:var(--text2);font-size:12px">Version</span><b style="font-family:'JetBrains Mono',monospace;font-size:12.5px">v0.2 Premium</b></div>
           <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)"><span style="color:var(--text2);font-size:12px">Region</span><b style="font-size:12.5px">IND (Forced)</b></div>
           <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)"><span style="color:var(--text2);font-size:12px">Mode</span><b style="font-size:12.5px">Lone Wolf Only</b></div>
@@ -1734,6 +1831,13 @@ body.nav-open .nav-overlay{display:block}
       </div>
       <div id="tokenFields" style="display:none">
         <div class="field"><label>Access Token</label><textarea id="in-tok" placeholder="Paste full token here..."></textarea></div>
+      </div>
+      <div class="field bulk-import-panel">
+        <label><i class="fa-solid fa-file-arrow-up"></i> Bulk Import Accounts (JSON)</label>
+        <input id="bulkJsonFile" type="file" accept=".json,application/json" />
+        <small>JSON array format: [{"uid":"123456","password":"your-password"}] or {"accounts":[...]}. Existing accounts are not removed.</small>
+        <button type="button" class="btn" id="bulkImportBtn"><i class="fa-solid fa-cloud-arrow-up"></i> Import JSON Accounts</button>
+        <div id="bulkImportStatus" aria-live="polite" style="font-size:11px;color:var(--text2);margin-top:6px"></div>
       </div>
       <div class="modal-actions">
         <button type="button" class="btn ghost" id="cancelAdd">Cancel</button>
@@ -1822,7 +1926,7 @@ function toast(msg, type){
   setTimeout(function(){ el.classList.add('hide'); setTimeout(function(){ el.remove(); }, 300); }, 4000);
 }
 function confetti(){
-  var colors = ['#a78bfa','#818cf8','#22d3ee','#fbbf24','#10d981','#f472b6'];
+  var colors = ['#ff2638','#ff4b19','#ffd21f','#fbbf24','#10d981','#ff4b19'];
   for(var i=0;i<40;i++){
     (function(){
       var c = document.createElement('div');
@@ -2440,6 +2544,43 @@ async function clearLogs(){
 }
 function openAdd(){ $('addModal').classList.add('on'); }
 function closeAdd(){ $('addModal').classList.remove('on'); }
+async function importJsonAccounts(){
+  var dashInput = $('bulkJsonFileDash');
+  var modalInput = $('bulkJsonFile');
+  var input = (dashInput && dashInput.files && dashInput.files.length) ? dashInput : modalInput;
+  var isDash = input === dashInput;
+  var status = $(isDash ? 'bulkImportStatusDash' : 'bulkImportStatus');
+  var btn = $(isDash ? 'bulkImportBtnDash' : 'bulkImportBtn');
+  var file = input && input.files && input.files[0];
+  if(!file){ toast('Choose a JSON file first', 'err'); return; }
+  btn.disabled = true;
+  status.textContent = 'Reading JSON file…';
+  try{
+    var parsed = JSON.parse(await file.text());
+    var accounts = Array.isArray(parsed) ? parsed : (parsed && Array.isArray(parsed.accounts) ? parsed.accounts : null);
+    if(!accounts) throw new Error('JSON must be an array or an object with an accounts array');
+    var unique = [], seen = {};
+    accounts.forEach(function(a){
+      if(!a || a.uid == null || a.password == null) return;
+      var uid = String(a.uid).trim(), password = String(a.password);
+      if(!uid || !password.trim() || seen[uid]) return;
+      seen[uid] = true; unique.push({uid:uid, password:password});
+    });
+    if(!unique.length) throw new Error('No valid accounts found. Each item needs uid and password.');
+    var added = 0, failed = 0, errors = [];
+    for(var i=0;i<unique.length;i++){
+      status.textContent = 'Importing '+(i+1)+' / '+unique.length+'…';
+      var result = await apiPost('/api/account/add', unique[i]);
+      if(result && result.status === 'ok') added++;
+      else { failed++; if(errors.length < 3) errors.push(unique[i].uid+': '+((result && result.error) || 'Import failed')); }
+    }
+    status.textContent = 'Finished: '+added+' added, '+failed+' failed.'+(errors.length ? ' '+errors.join(' | ') : '');
+    toast(added+' account(s) imported'+(failed ? ', '+failed+' failed' : ''), failed ? 'warn' : 'ok');
+    if(added) setTimeout(fetchStats, 500);
+  }catch(err){ status.textContent = err.message || 'Could not read JSON file'; toast(status.textContent, 'err'); }
+  finally{ btn.disabled = false; }
+}
+
 async function submitAdd(e){
   e.preventDefault();
   var type = $('authType').value;
@@ -2587,6 +2728,14 @@ function initBindings(){
     $('tokenFields').style.display = t === 'token' ? 'block' : 'none';
   });
   $('addForm').addEventListener('submit', submitAdd);
+  $('bulkImportBtn').addEventListener('click', importJsonAccounts);
+  $('bulkImportBtnDash').addEventListener('click', importJsonAccounts);
+  $('kmAddAction').addEventListener('click', openAdd);
+  $('kmBulkAction').addEventListener('click', function(){ $('bulkJsonFileDash').click(); });
+  $('kmAccountsAction').addEventListener('click', function(){ switchView('nodes'); });
+  $('kmLogsAction').addEventListener('click', function(){ switchView('term'); });
+  $('kmProfileAction').addEventListener('click', function(){ switchView('prof'); });
+  $('kmPremiumInfo').addEventListener('click', function(){ toast('Premium dashboard styling enabled', 'ok'); });
   $('cancelAdd').addEventListener('click', closeAdd);
   $('addModal').addEventListener('click', function(e){ if(e.target.id === 'addModal') closeAdd(); });
 
