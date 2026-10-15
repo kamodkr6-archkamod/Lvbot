@@ -1731,6 +1731,7 @@ html,body{background:#080403}
             <option value="dense">Dense</option>
           </select>
           <button class="btn" id="pauseAllBtn"><i class="fa-solid fa-pause"></i>Pause All</button>
+          <button class="btn danger" id="deleteAllAccountsBtn" type="button" title="Permanently delete every saved account"><i class="fa-solid fa-trash-can"></i>Delete All Accounts</button>
         </div>
 
         <div class="seg" id="filters" style="margin-bottom:12px">
@@ -2487,6 +2488,29 @@ async function deleteNode(uid){
   if(r.status==='ok'){ toast('Account deleted', 'ok'); S.cardsMap.delete(String(uid)); setTimeout(fetchStats, 300); }
   else toast(r.error||'Delete failed', 'err');
 }
+
+async function deleteAllAccounts(){
+  var count = S.accounts.length;
+  if(count === 0){ toast('No accounts to delete', 'warn'); return; }
+  if(!confirm('DELETE ALL '+count+' ACCOUNTS? This permanently removes every saved account from accounts.json and cannot be undone.')) return;
+  var typed = prompt('Type DELETE ALL to confirm:');
+  if(typed !== 'DELETE ALL'){ toast('Delete all cancelled', 'warn'); return; }
+  var btn = $('deleteAllAccountsBtn');
+  if(btn) btn.disabled = true;
+  try{
+    var r = await apiPost('/api/account/delete_all', {confirm: 'DELETE ALL'});
+    if(r.status === 'ok'){
+      S.selected = {};
+      S.cardsMap.clear();
+      updateBulkbar();
+      toast('Deleted '+(r.deleted_count || count)+' account(s)', 'ok');
+      await fetchStats();
+    } else {
+      toast(r.error || 'Delete all failed', 'err');
+    }
+  }catch(e){ toast('Delete all failed: '+(e.message || 'request error'), 'err'); }
+  finally{ if(btn) btn.disabled = false; }
+}
 async function refreshNode(uid){
   toast('Syncing '+uid+'...');
   await apiPost('/api/account/refresh', {uid: uid});
@@ -2699,6 +2723,7 @@ function initBindings(){
   $('refreshBtn').addEventListener('click', function(){ fetchStats(); toast('Refreshed', 'ok'); });
   $('addBtn').addEventListener('click', openAdd);
   $('pauseAllBtn').addEventListener('click', togglePauseAll);
+  $('deleteAllAccountsBtn').addEventListener('click', deleteAllAccounts);
   $('sortSel').addEventListener('change', function(){ S.sort = $('sortSel').value; renderNodesSmooth(); });
   $('densitySel').addEventListener('change', function(){
     S.density = $('densitySel').value;
