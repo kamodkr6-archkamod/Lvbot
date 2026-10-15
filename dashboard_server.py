@@ -370,6 +370,53 @@ async def handle_add_account(request: web.Request) -> web.Response:
         return web.json_response({"status": "error", "error": str(e)})
 
 
+async def handle_delete_all_accounts(request: web.Request) -> web.Response:
+    try:
+        data = await request.json()
+        if data.get("confirm") != "DELETE ALL":
+            return web.json_response(
+                {"status": "error", "error": "Confirmation required"}, status=400
+            )
+
+        accounts_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "accounts.json")
+        saved_count = 0
+        if os.path.exists(accounts_file):
+            with open(accounts_file, "r", encoding="utf-8") as f:
+                saved = json.load(f)
+            if not isinstance(saved, list):
+                return web.json_response(
+                    {"status": "error", "error": "accounts.json must contain a JSON list"}, status=400
+                )
+            saved_count = len(saved)
+
+        runtime_count = len(bot_state.accounts)
+        # Stop all account workers before clearing runtime state.
+        for key, worker in list(bot_state.account_workers.items()):
+            if worker and not worker.done():
+                worker.cancel()
+            bot_state.account_workers.pop(key, None)
+
+        # Persist an empty account list so accounts do not return after restart.
+        with open(accounts_file, "w", encoding="utf-8") as f:
+            json.dump([], f, indent=2)
+
+        bot_state.accounts.clear()
+        bot_state.account_credentials.clear()
+        bot_state.total_gained_exp = 0
+        bot_state.log(
+            f"ALL ACCOUNTS DELETED | saved={saved_count}, runtime={runtime_count}",
+            "warning",
+        )
+        return web.json_response({
+            "status": "ok",
+            "deleted_count": max(saved_count, runtime_count),
+            "saved_deleted": saved_count,
+            "runtime_deleted": runtime_count,
+        })
+    except Exception as e:
+        return web.json_response({"status": "error", "error": str(e)}, status=500)
+
+
 async def handle_delete_account(request: web.Request) -> web.Response:
     try:
         data = await request.json()
@@ -492,6 +539,7 @@ async def start_web_dashboard(host: str = "0.0.0.0", port: int = 20333):
     app.router.add_get("/api/stats", handle_get_stats)
     app.router.add_post("/api/account/add", handle_add_account)
     app.router.add_post("/api/account/delete", handle_delete_account)
+    app.router.add_post("/api/account/delete_all", handle_delete_all_accounts)
     app.router.add_post("/api/account/refresh", handle_refresh_account)
     app.router.add_post("/api/account/restart", handle_restart_account)
     app.router.add_post("/api/account/mode", handle_mode_switch)
